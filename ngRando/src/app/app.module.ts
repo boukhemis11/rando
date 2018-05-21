@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { HikeComponent } from './hike/hike.component';
 import { Hike } from './shared/hike';
 import { HikeService } from './hike/hike.service';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HikeComponent
+    HikeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [HikeService],
   bootstrap: [AppComponent]

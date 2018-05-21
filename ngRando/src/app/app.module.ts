@@ -8,13 +8,15 @@ import { Hike } from './shared/hike';
 import { HikeService } from './hike/hike.service';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HikeDetailsComponent } from './hike-details/hike-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HikeComponent,
-    HomeComponent
+    HomeComponent,
+    HikeDetailsComponent
   ],
   imports: [
     BrowserModule,

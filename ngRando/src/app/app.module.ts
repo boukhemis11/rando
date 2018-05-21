@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HikeComponent } from './hike/hike.component';
@@ -14,7 +14,8 @@ import { HikeService } from './hike/hike.service';
     HikeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [HikeService],
   bootstrap: [AppComponent]

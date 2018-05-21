@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Hike } from './shared/hike';
 import { HikeService } from './hike/hike.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,7 +21,9 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.hikes = this._hikeService.getHikes();
+    // this.hikes = this._hikeService.getHikes();
+    this._hikeService.getHikes()
+         .subscribe(res => this.hikes = res, err => console.error(err.status) );
     console.log(this.hikes);
   }
 

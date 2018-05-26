@@ -1,21 +1,21 @@
-<form class="m-5">
-  <div class="form-group">
+<form #form="ngForm" (submit)="sendMsg(form)" class="m-5">
+  <div class="form-group" >
     <label for="subject">Sujet</label>
-    <input type="email" class="form-control" id="subject" placeholder="sujet">
+    <input #msg="ngModel" required type="text" class="form-control" id="subject" ngModel="" name="subject" placeholder="sujet">
+    <div *ngIf="msg.invalid && msg.touched" class="alert alert-danger">sujet manqaunt</div>
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <textarea class="form-control" id="message" rows="3"></textarea>
+    <textarea class="form-control" id="message" ngModel="" name="message" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="service">Service</label>
-    <select class="form-control" id="service">
+    <select class="form-control" id="service" ngModel="" name="service">
       <option value="tech">technique</option>
       <option value="sales">comercial</option>
       <option value="guide">guide</option>
-      <option>4</option>
-      <option>5</option>
     </select>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]='form.invalid'>Submit</button>
 </form>
+{{form.value | json}}

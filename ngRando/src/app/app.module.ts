@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { HikeComponent } from './hike/hike.component';
 import { Hike } from './shared/hike';
 import { HikeService } from './hike/hike.service';
+
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HikeDetailsComponent } from './hike-details/hike-details.component';
 import { HikeFilterPipe } from './hike/hike-filter.pipe';
 import { ContactComponent } from './contact/contact.component';
+import { ContactService } from './contact/contact.service';
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [HikeService],
+  providers: [HikeService, ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

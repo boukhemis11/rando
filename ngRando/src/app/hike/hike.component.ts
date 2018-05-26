@@ -10,12 +10,11 @@ import { HikeService } from './hike.service';
 })
 export class HikeComponent implements OnInit {
 
-  hike = [];
-  private _hikeService: HikeService;
-
   hikes: Hike[];
 
-  constructor (_hikeService: HikeService) {
+  searchTerm: string;
+
+  constructor (private _hikeService: HikeService) {
     this._hikeService = _hikeService;
 
   }

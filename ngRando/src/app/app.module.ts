@@ -14,6 +14,8 @@ import { HikeDetailsComponent } from './hike-details/hike-details.component';
 import { HikeFilterPipe } from './hike/hike-filter.pipe';
 import { ContactComponent } from './contact/contact.component';
 import { ContactService } from './contact/contact.service';
+import { HikeSummaryComponent } from './hike-summary/hike-summary.component';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { ContactService } from './contact/contact.service';
     HomeComponent,
     HikeDetailsComponent,
     HikeFilterPipe,
-    ContactComponent
+    ContactComponent,
+    HikeSummaryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> <a [routerLink]="['/hike', hike.id]">{{hike.name }} </a> </h5>
+
+    <p class="card-text">{{hike.description}}</p> <br>
+<input type='checkbox' (change)="toggleTodoHike($event.target.checked)" >
+  </div>
+</div>

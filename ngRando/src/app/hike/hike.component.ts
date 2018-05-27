@@ -3,6 +3,7 @@ import { Hike } from '../shared/hike';
 import { HikeService } from './hike.service';
 
 
+
 @Component({
   selector: 'app-hike',
   templateUrl: './hike.component.html',
@@ -23,6 +24,9 @@ export class HikeComponent implements OnInit {
     this._hikeService.getHikes()
          .subscribe(res => this.hikes = res, err => console.error(err.status) );
     console.log(this.hikes);
+  }
+  toggleToMyHike(hikeToAdd ) {
+console.log( 'ajouter' + hikeToAdd.name );
   }
 
 }
